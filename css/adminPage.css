@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+  }
+  
+  .userInfoBar {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: large;
+    color: #1B9F90;
+  }
+  
+  .userInfoParamTitle {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 16.4rem;
+  }
+  
+  .userInfo {
+    background-color: #fefefe;
+    color: #424242;
+    margin-top: 15px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+  
+  .userInfoParam {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 16rem;
+  }
+  
+  .editUserButton {
+    margin-left: 16px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+  }
+  

@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  z-index: 1;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.new-ticket-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+#ftitle {
+  margin-left: 1rem;
+  border: 2px solid #ccc;
+  margin-top: 0.15rem;
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+}
+
+#description-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.textarea-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-top: 15px;
+}
+
+textarea {
+  border: 2px solid #ccc;
+  margin-right: 20px;
+}
+
+.createTicketButton-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#createTicket-button {
+  background: linear-gradient(to bottom right, #108fb9, #20bdaa);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#createTicket-button:hover {
+  background: linear-gradient(to bottom right, #20bdaa, #108fb9);
+}
+
+#inquiryDescriptionTitle {
+  font-size: large;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#inquiryDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+#createInquiry-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: rgb(92, 201, 150);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}

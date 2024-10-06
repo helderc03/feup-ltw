@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jockey One';
+}
+
+.auth-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card-container {
+  perspective: 500px;
+}
+
+/* flip the pane when hovered */
+.card-container.rotate .card {
+  transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.card {
+  transition: transform 0.85s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.login-form,
+.signup-form {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* front pane, placed above back */
+.login-form {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.signup-form {
+  transform: rotateY(180deg);
+  z-index: 3;
+}
+
+/* Styles */
+.card-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 4px;
+  color: #444444;
+}
+
+.card-container,
+.login-form,
+.signup-form {
+  height: 420px;
+  border-radius: 4px;
+}
+
+.login-form,
+.signup-form {
+  width: 118%;
+  height: 457px;
+  border-radius: 4px;
+}
+
+.card .header {
+  margin: 10px;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+  color: #212529;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12),
+    0 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+.card .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  flex: 1;
+}
+
+.card .footer {
+  border-top: 1px solid #eeeeee;
+  color: #999999;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-rotate {
+  color: #212529;
+}
+
+.btn-rotate:hover {
+  color: #212529;
+  background-color: #ccc;
+}
+
+.btn-rotate:focus {
+  outline: none;
+  border: none;
+}
+
+.btn-submit {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: floralwhite;
+  background-color: #1b9f90;
+}
+
+.btn-submit:hover {
+  color: #212529;
+  background-color: #1b9f90;
+}
+
+.btn-submit:focus {
+  outline: none;
+  border: none;
+}
+
+form {
+  width: 100%;
+}
+
+.input-field {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-field input {
+  width: 100%;
+  max-height: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #68a8a1;
+  color: white;
+  transition: 0.4s;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+::-moz-placeholder {
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.input-field input:focus {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+     0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.see-password {
+  position: absolute;
+  right: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.group input {
+  padding-right: 40px;
+}
+
+.image-container {
+  background-image: linear-gradient(253deg, #212529 0, #212529 100%);
+  width: 100%;
+  max-width: 26.875rem;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  overflow: hidden;
+  padding: 0 8px;
+}
+
+.container-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: 0 0;
+}
+
+.animate-text {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container-text__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image-container-title {
+  max-width: 100%;
+  color: #fff;
+  font-family: GothamProMedium, serif;
+  font-size: 2.125rem;
+  letter-spacing: 0;
+  line-height: 48px;
+  margin: 0 0 32px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-family: 'Jockey One';
+}
+
+.image-container-text {
+  width: 100%;
+  max-width: 350px;
+  color: #fff;
+  font-family: GothamPro, serif;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: 'Jockey One';
+}
+
+.imagine-container-btn {
+  height: 54px;
+  min-width: 223px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-family: GothamProMedium, serif;
+  font-size: .875rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  line-height: 100%;
+  box-shadow: 0 12px 24px rgba(34, 51, 49, .13);
+  background-color: #28b498;
+  width: 40%;
+}
+
+#btn-login.btn.btn-rotate {
+  color: floralwhite;
+  background-color: #1b9f90;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.image-container_login {
+  right: 0;
+}
+
+#btn-login {
+  background-color: #28b498;
+}
+
+.footer {
+  display: none;
+}
+
+@media screen and (max-width: 910px) {
+  .card-container {
+    width: 19rem;
+    width: 300px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-10%);
+  }
+  
+  .card-container.rotate {
+    left: 50%;
+    transform: translateX(10%);
+  }
+
+  .image-container {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  #btn-signup {
+    visibility: visible;
+    background-color: #212529;
+    height: 5%;
+    width: 19rem;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  #btn-signup:hover {
+    color: white;
+  }
+}
+
+.password-toggle {
+  position: absolute;
+  margin-left: 260px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}

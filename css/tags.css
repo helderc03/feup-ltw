@@ -1,0 +1,36 @@
+.selected-tags-container {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  margin: 5px;
+  background-color: #1b9f90;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.tag-text {
+  margin-right: 5px;
+}
+
+option {
+  padding: 10px;
+}
+
+.tag-remove {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  background-image: url("path/to/remove-icon.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.tag-remove:hover {
+  opacity: 0.8;
+}

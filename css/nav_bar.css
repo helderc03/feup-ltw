@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Jockey One';
+  overflow-x: hidden;
+}
+
+.wrapper .menu-toggle {
+  display: none;
+}
+
+.wrapper .sidenav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #313131;
+  color: whitesmoke;
+}
+
+.wrapper .sidenav h1 {
+  text-align: center;
+  margin: 0;
+  border-bottom: solid 0.3px whitesmoke;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.wrapper .sidenav ul {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding-left: 0;
+  margin: 0;
+}
+
+.wrapper .sidenav .ticket-information ul li {
+  border-bottom: solid 0.3px whitesmoke;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.wrapper .sidenav .ticket-information ul li:hover,
+.wrapper .sidenav .non-ticket-information ul li:hover {
+  background-color: #929491;
+}
+
+.wrapper .sidenav .non-ticket-information {
+  margin-top: auto;
+}
+
+.wrapper .sidenav .non-ticket-information ul {
+  padding: 0;
+  text-align: center;
+}
+
+.wrapper .sidenav .non-ticket-information ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 910px) {
+  * {
+    font-size: 1rem;
+  }
+  .wrapper .sidenav-menu {
+    display: none;
+    width: 40%;
+  }
+  .wrapper .sidenav-menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+  }
+  .wrapper .menu-toggle {
+    display: block;
+    background-color: #313131;
+  }
+  .fa-bars {
+    display: block;
+    width: 25px;
+    height: 4px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+  }
+  .menu-btn {
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .menu-btn.opened {
+    position: relative;
+    left: 40.05%;
+    transform: translateX(-1%);
+    background-color: #555555;
+    padding: 0.7rem;
+    top: 0;
+    margin: 0;
+    font-family: "Font Awesome 5 Free";
+    content: "f00d";
+  }
+  .menu-btn.opened span::before {
+    content: "\f00d";
+  }
+  .menu-btn span::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c9";
+    font-size: 1.5rem;
+  }
+  .menu-btn span::after {
+    display: none;
+  }
+  .menu-btn[aria-expanded="true"] span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .menu-btn[aria-expanded="true"] span:after {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 50%;
+  }
+  .menu-btn[aria-expanded="true"] .hamburger {
+    transform: rotate(90deg);
+  }
+  .sub-menu {
+    display: none;
+  }
+  .ticket-dropdown > a:after {
+    content: "+";
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+  .ticket-dropdown.open > a:after {
+    content: "-";
+  }
+  .ticket-dropdown.open > .sub-menu {
+    display: block;
+  }
+  
+  .showFilterSideBarButton {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #313131;
+  transition: right 0.3s ease-in-out;
+  z-index: 99999;
+  color: white;
+  text-align: center;
+}
+
+.filter-sidebar.sidebar-show {
+  right: 0;
+}
+
+.showFilterSideBarButton {
+  position: fixed;
+  top: 87%;
+  right: 2%;
+  z-index: 9999;
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #1b9f90;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#tags,
+#filterAssignee,
+#filterDepartment,
+#filterStatus {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  max-width: 220px;
+}
+
+.filterButton {
+  border-radius: 19%;
+  width: 112px;
+  height: 37px;
+  background-color: #4e9f9d;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+.showFilterSideBarButton:active {
+  transform: scale(0.96);
+}
+
+.showFilterSideBarButton:hover {
+  cursor: pointer;
+  background-color: #4e9f9d;
+}
+
+@media screen and (max-width: 910px) {
+  .showFilterSideBarButton {
+    width: 4rem;
+    height: 4rem;
+    bottom: 10%;
+  }
+}

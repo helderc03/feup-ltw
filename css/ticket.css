@@ -1,0 +1,365 @@
+/* fonts family */
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .ticket-area {
+  width: 80%;
+  height: auto;
+  min-height: 100vh;
+  margin-left: 20vw;
+  background-color: #dedddd;
+  position: absolute;
+  z-index: -1;
+  padding-bottom: 10px;
+}
+
+.wrapper .ticket-area .ticket {
+  display: auto;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.description {
+  background-color: #fefefe;
+  width: 65%;
+  display: auto;
+  border-collapse: collapse;
+  color: #424242;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.inquiryBox {
+  background-color: #dedddd;
+  width: 100%;
+  display: auto;
+  border-collapse: collapse;
+  color: #106359;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  border-top: 2px solid #106359;
+  border-bottom: 2px solid #106359;
+}
+
+.text {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.submitInquiry {
+  display: inline-block;
+  right: 0;
+  background-color: #424242;
+  color: white;
+  font-size: 1rem;
+  font-family: "Jockey One", sans-serif;
+  border-radius: 5px;
+  user-select: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px 20px;
+}
+
+.submitInquiry:hover {
+  background-color: #333333;
+}
+
+.wrapper .ticket-area td {
+  background-color: #fefefe;
+}
+
+.ticket-priority {
+  border-top-left-radius: 10px;
+  width: 200px;
+  text-align: center;
+  color: #424242;
+  border-right: 3px solid #dedddd;
+  border-bottom: 3px solid #dedddd;
+}
+
+.ticket-title {
+  border-top-right-radius: 10px;
+  width: 600px;
+  height: 40px;
+  padding: 20px;
+  text-align: center;
+  color: #424242;
+}
+
+.ticket-footer {
+  border-bottom-left-radius: 10px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  color: #424242;
+  border-right: 3px solid #dedddd;
+}
+
+.ticket-assigned {
+  padding-left: 10px;
+  width: 260px;
+  color: #424242;
+  border-top: 3px solid #dedddd;
+  border-right: 3px solid #dedddd;
+}
+
+.ticket-creator {
+  border-bottom-right-radius: 10px;
+  padding-left: 10px;
+  width: 260px;
+  color: #424242;
+  border-top: 3px solid #dedddd;
+}
+
+.ticket-hashtags {
+  color: #424242;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hashtag {
+  display: inline-block;
+  margin-right: 4px;
+  color: #424242;
+  border-radius: 4px;
+  border: 1px solid #424242;
+  font-size: small;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ticket-changes {
+  background-color: #fefefe;
+  color: #424242;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 65%;
+  height: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  font-size: large;
+}
+
+.ticket.dragging {
+  opacity: 0.5;
+}
+
+.container {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 910px) {
+  .wrapper .ticket-area {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 2%;
+  }
+
+  .wrapper .ticket-area .container {
+    height: 100%;
+  }
+}
+
+.addTicketButton {
+  position: fixed;
+  bottom: 2%;
+  right: 1.5%;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background-color: #1b9f90;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.addTicketButton:hover {
+  cursor: pointer;
+  background-color: #106359;
+}
+
+.editTicketButton {
+  position: absolute;
+  bottom: 2%;
+  right: 1.5%;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background-color: #1b9f90;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.editTicketButton:hover {
+  cursor: pointer;
+  background-color: #106359;
+}
+
+.editTicketForms {
+  background-color: #fefefe;
+  color: #424242;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+select {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+option {
+  font-size: 16px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.updateButton {
+  background: linear-gradient(to bottom right, #108fb9, #20bdaa);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.updateButton:hover {
+  background: linear-gradient(to bottom right, #20bdaa, #108fb9);
+}
+
+.specialElement {
+  color: #1b9f90;
+}
+
+.ticketDepartment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 910px) {
+  .wrapper .ticket-area .ticket {
+    width: 80%;
+  }
+
+  .description {
+    width: 80%; 
+  }
+
+  .editTicketButton {
+    width: 4rem;
+    height: 4rem;
+    bottom: 10%;
+  }
+
+  .addTicketButton {
+    width: 4rem;
+    height: 4rem;
+    bottom: 3%;
+  }
+
+  .ticket-changes{
+    width: 80%;
+  }
+}
+
+.comment-table {
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 15px;
+  width: 500px;
+}
+
+.comment-description {
+  color: black;
+}
+
+.comment-creator {
+  text-align: right;
+  color: #a0a0a0;
+}
+
+li {
+  list-style-position: inside;
+}
+
+li::marker {
+  display: inline;
+  padding: 0;
+  margin-right: 0;
+}
+
+.no-tickets{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  font-size: 24px;
+}
+
+img{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
