@@ -12,8 +12,6 @@ Admin: john-wick@example.com mypassword
 
 When creating a new account in our website, the user's password is encrypted in the database. However, the passwords from these users does not appear encrypted as they are being inserted directly through our database.sql file without hashing.
 
-Reminder: We had a small error in the include on one of the files in the sign up action and through slack the teacher told us to make another tag fixing that error, please use final-delivery-v2.
-
 Member participation:
 
 Diogo Sá up201905383 33,3% <br />
